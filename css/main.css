@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#f6f6fe;
+}
+a{
+    text-decoration: none;
+}
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+}
+.contenedor__title{
+    font-family:'Roboto';
+    font-size: 2.5rem;
+    padding: 25px 0;
+    text-align: center;
+
+}
+
+/*xxxxxxxxxxxx----HERO----xxxxxxxxxxxxxx*/
+.hero-container{
+
+    background-image:url(/img/her.jpg);
+    height: 30vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+}
+.hero-container:before{
+        content: "";
+        position: absolute;
+        background: #000;
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+}
+.nav{
+    position: relative;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.5rem;
+    padding:10px 126px;
+
+}
+.descripcion{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    min-height: 400px;
+    max-width: 100%;
+    width: 35%;
+    background-color: white;
+    color: #111;
+    border-radius: 10px;   
+    box-shadow:5px 5px 7px rgba(0, 0, 0, .2);
+    top: 50px;
+    right: -100%;  
+    transition: .3s all ease-in-out;
+}
+.descripcion.active{
+    right: 50px;
+}
+
+.descripcion__titulos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: red;
+}
+
+.descripcion__cuerpo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rebeccapurple;
+}
+.descripcion__imagen{
+    flex: 1 40%;
+    
+}
+.descripcion__nombre{
+    flex: 1 20%;
+    
+}
+.descripcion__precio{
+    flex: 1 20%;
+    
+}
+.descripcion__cantidad{
+    flex:1 20%;
+    
+}
+.borrarCarrito{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    border: 1px solid darkcyan;
+    color: darkcyan;
+    margin :auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.borrarCarrito:hover{
+    color: #fff;
+    background-color: darkcyan;
+}
+
+.nav__icono{
+    cursor: pointer;
+}
+.nav__texto{
+    color: white;
+}
+.info{
+    position: relative;
+    height:70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+.info__texto{
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 3px;
+    font-family: 'Roboto';
+    border: 5px solid #fff;
+    padding: 10px;
+}
+.info__buscar{
+    display: flex;
+}
+.info__input{
+    border: none;
+    width: 500px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 4px 0 0 4px;
+}
+.info__input:focus{
+    border-color: rgb(255, 144, 0);
+    box-shadow: 1px 1px 10px rgba(255,144,0,1);
+    outline: 0 none;
+}
+
+.info__boton{
+    border:1px solid white;
+    background-color: white;
+    color:darkcyan;
+    font-size: 1.5rem;
+    border-radius: 0 4px 4px 0;
+    border-left: 2px solid;
+    padding: 0 3px;
+}
+
+/*xxxxxxxxxxxx----MENU INFERIOR----xxxxxxxxxxxxxx*/
+.menu-inferior{
+    background-color:#5499C7;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.menu-inferior__ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex:1 0 auto;
+}
+
+.menu-inferior__li{ 
+    text-align: center;
+}
+
+.menu-inferior__links{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.4rem
+}
+.menu-inferior__icono{
+    font-size: 3rem;
+
+}
+.menu-inferior__textos{
+    margin-left: 25px;
+}
+
+
+/*xxxxxxxxxxxx----CARDS----xxxxxxxxxxxxxx*/
+.contenedor__card{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+    overflow: hidden;
+}
+.contenedor__title{
+    font-size: 2rem;
+}
+
+
+.card{
+    background-color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 20px;
+    max-width: 330px;
+    height: 430px;
+    box-shadow:5px 5px 7px rgba(0, 0, 0, .2);
+    text-align: center;
+    
+}
+.card__img{
+    width: 100%;
+    height: 210px;
+    object-fit:cover;
+    overflow: hidden;
+    border-radius:20px 20px;
+}
+.card__textos{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+}
+.card__titulo{
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.card__parrafo{
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: .5px;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 300;
+}
+.card__precios{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.card__precio{
+    font-size:1.5rem;
+    text-decoration-line: line-through;
+}
+.card__precio-oferta{
+    font-size:1.5rem;
+    font-weight: bold;
+
+}
+.boton{
+    border:none;
+    height: 50px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    background:darkcyan;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s all ease-in-out;
+}
+.boton__texto{
+    font-size: 1.2rem;
+}
+.boton:hover{
+    background-color: #fff;
+    color:darkcyan ;
+}
+
+
